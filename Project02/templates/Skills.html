@@ -1,0 +1,54 @@
+{%extends 'Base.html' %}
+
+{% block Title %}
+Skills
+{%endblock%}
+
+{%block Main%}
+<h1 align="center" style="color: black; background-color: cornflowerblue;">Skills</h1>
+<table>
+    <td style="border: 1; color: red; background-color: cadetblue;">
+        <h2>
+                Programming Languages :-
+            </h2>
+            <ol>
+                {%for Lang in Languages%}
+                <li>{{Lang}}</li>
+                {%endfor%}
+            </ol>
+            <h2>Databases :-</h2>
+            <ol>
+                {% for Db in Databases %}
+                <li>{{Db}}</li>
+                {%endfor%}
+            </ol>
+    </td>
+    <td style="border: 1; color: blue; background-color: aqua;">
+        <ol>
+            <h2>Frameworks & Library</h2>
+            {% for Frame in Frameworks%}
+            <li>{{Frame}}</li>
+            {%endfor%}
+            <li>{{Library}}</li>
+        </ol>
+        <ol>
+            <h2>Web Technologies :-</h2>
+            {% for Web in WebTech %}
+            <li>{{Web}}</li>
+            {%endfor%}
+        </ol>
+    </td>
+    <td style=" color: pink; background-color: aliceblue;">
+        <ol>
+            <h2>Tools :-</h2>
+            {% for Tool in Tools%}
+            <li>{{Tool}}</li>
+            {%endfor%}
+        </ol>
+    </td>
+    <td>
+        <img src="https://img.magnific.com/premium-photo/unlocking-professional-skills-career-growth-with-digital-technology_1101054-87065.jpg?semt=ais_hybrid&w=740&q=80" alt="photo" width="80%" height="80%">
+    </td>
+</table>
+
+{%endblock%}

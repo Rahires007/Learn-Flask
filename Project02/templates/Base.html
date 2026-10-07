@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%block Title%}
+
+        {%endblock%}
+    </title>
+    <style>
+        button:hover
+        {
+            background-color: black;
+            color: white;
+            padding: 1px;
+            margin: 1px;
+            transform: scale(0.3ms);
+            transition: 0.3ms;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <div>
+        <div align="left">
+            <font size="6px" color="violet">Welcome !...</font>
+        </div>
+        <div align="right">
+            <nav>
+                <a href="/"><button>About</button></a>
+                <a href="/Skills"><button>Skils</button></a>
+                <a href="/Contact"><button>Contact</button></a>
+            </nav>
+        </div>
+    </div>
+    <hr>
+    {% block Main %}
+
+    {%endblock%}
+
+    <hr>
+    <div>
+        <footer align="center" style="color: black; background-color: cadetblue;">
+            <marquee behavior="left" direction="right">
+                @ Sahebrao Shivaji Rahire -- All Rights Are Reserved
+            </marquee>
+        </footer>
+    </div>
+    <hr>
+</body>
+</html>
