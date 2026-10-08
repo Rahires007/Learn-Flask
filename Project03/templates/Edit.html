@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+<body>
+    <center>
+        <hr>
+        <h2 style="background-color: cornflowerblue; color: black;">Student Form</h2>
+        <hr>
+        <form action="/Edit/{{student.Id}}" method="post">
+            <label for="Id">Student Id</label>
+            <br>
+            <br>
+            <input type="text" name="Id" id="Id" placeholder="Enter your id here" value="{{student.Id}}" required readonly>
+            <br>
+            <br>
+            <label for="Name">Student Name</label>
+            <br>
+            <br>
+            <input type="text" name="Name" id="Name" placeholder="Enter your name here" value="{{student.Name}}" required>
+            <br>
+            <br>
+            <label for="Class">Student Class</label>
+            <br>
+            <br>
+            <input type="text" name="Class" id="Class" placeholder="Enter your class here" value="{{student.Class}}" required>
+            <br>
+            <br>
+            <label for="City">Student City</label>
+            <br>
+            <br>
+            <input type="text" name="City" id="City" placeholder="Enter your city here" value="{{student.City}}" required>
+            <br>
+            <br>
+            <button>Submit</button>
+        </form>
+        <hr>
+    </center>
+</body>
+</html>

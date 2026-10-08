@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Dashboard </title>
+</head>
+<body>
+    <center>
+        <hr>
+        <h2 align="left">Welcome To Students Dashboard</h2>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Student Class</th>
+                    <th>Student City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students%}
+                <tr>
+                    <td>{{student.Id}}</td>
+                    <td>{{student.Name}}</td>
+                    <td>{{student.Class}}</td>
+                    <td>{{student.City}}</td>
+                    <td>
+                        <a href="/Delete/{{student.Id}}"><button>Delete</button></a>
+                        <a href="/Edit/{{student.Id}}"><button>Edit</button></a>
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        <hr>
+        <a href="/Form"><button>Add Students</button></a>
+        <hr>
+    </center>
+</body>
+</html>
